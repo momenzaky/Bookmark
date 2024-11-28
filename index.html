@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="header position-relative">
+            <h1 class="font-pacifico text-center  z-2">Bookmarker</h1>
+        </div>
+   
+
+       
+     <section class="body">
+            <div class="body border-book mt-5 py-4 d-flex justify-content-center align-items-center flex-column">
+                <div class="icon-header d-flex justify-content-center align-items-center  text-center">
+                    <i class="fa-solid fa-bookmark icon-l"></i>
+                    <h3 class="font-righteous ps-2 pe-2 pt-1">Bookmark your favorite sites</h3>
+                    <i class="fa-solid fa-bookmark icon-r"></i>
+                </div>
+                <div class="input-body w-100">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            <div class="input-icon d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-book-bookmark ps-1"></i>
+                                <p class="ps-2 fw-semibold mb-0" >Site Name</p>
+                            </div>
+                        </label>
+                        <input type="email" class="form-control" id="bookName"
+                            placeholder="Bookmark Name" oninput="validateBookName()">
+                            <small class="text-danger d-none" id="errorName">Please write the name of the site. </small>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            <div class="input-icon d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-link"></i>
+                                <p class="mb-0 ps-2 fw-semibold">Site URL</p>
+                            </div>
+                        </label>
+                        <input type="email" class="form-control" id="bookSite"
+                            placeholder="Website URL" oninput="validateBookSite()">
+                            <small class="text-danger d-none" id="errorSite">Please ensure that the link starts with https:// or http:// and that it is a correct link.</small>
+                    </div>
+
+                    <button class="btn btn-submit px-5 m-auto d-block " onclick="createBook()">Submit</button>
+                </div>
+
+
+            </div>
+    </section>
+
+    <section class="result">
+       
+            
+                <table class=" table  text-center bg-light mt-4">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize lh-base">index</th>
+                            <th class="text-capitalize lh-base">Website Name</th>
+                            <th class="text-capitalize lh-base">Visit</th>
+                            <th class="text-capitalize lh-base">Delete</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody id="allBooks">
+
+                    </tbody>
+                </table>
+            </div>
+        
+            
+    </section>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+/* General Style */
+
+.font-pacifico{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.font-righteous{
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+body{
+    font-family: "PT Sans Caption", sans-serif;
+    background-color: #F7ECDE;
+}
+
+::selection {
+    background-color: #fec260;
+
+}
+
+.header h1::after{
+    content: "";
+    position: absolute;
+   background-color:#fec260 ;
+    z-index: -1;
+    width: 24%;
+    height: 20px;
+    top: 62%;
+    right: 38%;
+    transition: all 0.5s;
+}
+
+
+.header h1:hover::after{
+    height: 60%;
+    top:35% ;
+}
+
+
+.border-book {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: black;
+}
+
+.icon-l{
+    font-size: 25px;
+    line-height: 25px;
+    color:#3EA55B ;
+}
+
+.icon-r{
+    font-size: 25px;
+    line-height: 25px;
+    color:#B3AC4A ;
+}
+
+.icon-header h3{
+    background-image: linear-gradient(to right, #3EA55B   ,  #B3AC4A );
+    background-clip: text;
+    color: transparent;
+}
+
+
+.form-control:focus {
+    border-color:#fec260 ;
+   box-shadow:0 0 0 .25rem rgba(254,194,96,.25) ;
+}
+
+ .body .btn-submit{
+    background-color: #d1512d;
+    color: white;
+    border-color:#d1512d ;
+}
+
+ .body .btn:hover{
+    background-color:#BB4120;
+    color: white;
+    border-color:#BB4120 ;
+}
+
+.fw-normal .eye.btn:active{
+background-color: white;
+color: black;
+border-color: black;
+}
+
